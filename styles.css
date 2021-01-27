@@ -7,7 +7,7 @@ ul {
     background-color: #118AB2;
     }
     
-    li {
+.navigation {
     float: left;
     }
     
@@ -31,9 +31,7 @@ ul {
         margin-right:auto;
         width:100%;
     }
-    #Adam li{
-        float:none;
-    }
+
     aside{
         background-color:#118AB2;
         color:white;
