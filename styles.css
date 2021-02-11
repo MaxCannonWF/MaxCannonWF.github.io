@@ -111,12 +111,6 @@ aside{
     padding:10px;
 }
 
-#Max{
-    padding:6px;
-    color:darkslategray;
-    background-color: #f3fd9b;
-}
-
 #Owen {
     background-color: rgb(255, 255, 255);
     width:60vw;
@@ -211,6 +205,46 @@ aside{
         height:auto;
     }
 #Max{
-    border:1px solid black;
-    background-color:paleturquoise;
-}
+        background-color: rgb(255, 255, 255);
+        width:60vw;
+        min-height: 75vh;
+        margin:auto;
+        border-radius: 10px;
+        display:grid;
+        grid-template-columns: 25% 1fr 1fr;
+        grid-template-rows: 30% 1fr 1fr 1fr;
+        
+        grid-template-areas:
+            "top top top"
+            "image content content"
+            "image content content"
+            "image bottom bottom";
+    }
+    
+#Max.top{
+        grid-area:top;
+        display:flex;
+        justify-content: center;
+        align-content:center;
+        color:rgb(255, 255, 255);
+        background-color: rgb(128, 149, 177);
+    }
+    
+#Max .image{
+        grid-area:image;
+        padding:20px;
+        }
+#Max .content{
+            grid-area:content;
+            padding:20px;
+        }
+    
+#Max .bottom{
+            grid-area:bottom;
+        }
+    
+#Max img{
+            box-shadow:2px 2px 3px rgb(59, 59, 59);
+            max-width: 100%;
+            height:auto;
+        }
