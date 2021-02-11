@@ -1,19 +1,51 @@
 
 .navigation{
-    
     margin: 0;
     padding: 0;
+    z-index: 2;
+    float: left;
+    width: 100%;
+    text-align:center;
+    position:absolute;
+    margin: 0px;
+    padding: 0px;
     overflow: hidden;
     background-color: #118AB2;
     }
+
 .navigation li{
-    float:left;
+    width: auto;
+    float: none;
+    text-align:center;
+    display: inline-block;
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-    
+.navigation li:hover{
+    background-color: #0A5770;
+}
+
+h1{
+    padding:auto;
+    margin:auto;
+    font-family: 'Anton', sans-serif;
+    font-size:250%;
+    letter-spacing: 1px;
+    font-weight:normal;
+}
+p{
+    font-family: 'Roboto', sans-serif;
+    line-height:1.5em ;
+}
+h2{
+    margin:0px;
+    padding:0px;
+    font-family: 'Anton', sans-serif;
+    font-weight:lighter;
+}
+
 li a {
 display: block;
 color: white;
