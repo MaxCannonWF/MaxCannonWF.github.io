@@ -133,7 +133,7 @@ aside{
     display:flex;
     justify-content: center;
     align-content:center;
-    color:rgb(255, 255, 255);
+    color:rgb(255, 255, 255);MaxImage
     background-color: rgb(128, 149, 177);
 }
 
@@ -204,6 +204,7 @@ aside{
         max-width: 100%;
         height:auto;
     }
+
 #Max{
         background-color: rgb(255, 255, 255);
         width:60vw;
@@ -221,7 +222,7 @@ aside{
             "image bottom bottom";
     }
     
-#Max.top{
+#Max .top{
         grid-area:top;
         display:flex;
         justify-content: center;
@@ -247,4 +248,4 @@ aside{
             box-shadow:2px 2px 3px rgb(59, 59, 59);
             max-width: 100%;
             height:auto;
-        }
+        }    
