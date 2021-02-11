@@ -1,4 +1,8 @@
-
+body{
+    background-color:#e1ffe1;
+    padding:0px;
+    margin:0px;
+}
 .navigation{
     margin: 0;
     padding: 0;
@@ -11,7 +15,7 @@
     padding: 0px;
     overflow: hidden;
     background-color: #118AB2;
-    }
+}
 
 .navigation li{
     width: auto;
@@ -56,20 +60,79 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 #Adam{
-    padding: 5px;
-    color:black;
+    background-color: rgb(255, 255, 255);
+    width:60vw;
+    min-height: 75vh;
+    margin:auto;
+    border-radius: 10px;
+    display:grid;
+    grid-template-columns: 25% 1fr 1fr;
+    grid-template-rows: 30% 1fr 1fr 1fr;
+    
+    grid-template-areas:
+        "top top top"
+        "image content content"
+        "image content content"
+        "image bottom bottom";
+    
 }
-#Adam table, td{
-    border: 1px solid black;
-    padding: 5px;
-    margin-left:auto;
-    margin-right:auto;
-    width:100%;
+#Adam .top{
+    grid-area:top;
+    display:flex;
+    justify-content: center;
+    align-content:center;
+    color:rgb(255, 255, 255);
+    background-color: rgb(128, 149, 177);
+    
 }
+#Adam .image{
+    grid-area:image;
+    padding:20px;
+    }
+#Adam .content{
+    grid-area:content;
+    padding:20px;
+}
+#Adam .bottom{
+    grid-area:bottom;
+}
+
+#Adam img{
+    box-shadow:2px 2px 3px rgb(59, 59, 59);
+    max-width: 100%;
+    height:auto;
+}
+
 
 aside{
     background-color:#118AB2;
     color:white;
     width:20%;
     padding:10px;
+}
+
+#Max{
+    padding:6px;
+    color:darkslategray;
+    background-color: #f3fd9b;
+}
+
+#Owen{
+    border:1px solid black;
+    background-color:paleturquoise;
+}
+
+#Jarne{
+    border:1px solid black;
+    background-color: palegreen;
+}
+
+#Brandon{
+    border:1px solid black;
+    background-color:#f3fd9b;
+}
+
+#Max{
+    border:1px solid black;
+    background-color:paleturquoise;
 }
