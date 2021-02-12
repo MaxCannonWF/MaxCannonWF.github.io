@@ -195,10 +195,11 @@ aside{
             "image content content"
             "image content content"
             "image bottom bottom";
-    }
+ }
     
     @keyframes popin{
         0% {transform: scale(0, 0);}
         60% {transform: scale(1.3, 1.3);}
         100% {transform: scale(1, 1);}
     }
+
