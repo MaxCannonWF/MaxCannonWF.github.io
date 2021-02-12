@@ -108,6 +108,12 @@ font-family: Arial, Helvetica, sans-serif;
     grid-area:image;
     padding:20px;
 }
+.image img{
+    box-shadow:2px 2px 3px rgb(59, 59, 59);
+    max-width: 100%;
+    height:auto;
+    border-radius: 30px;
+}
 .content{
     grid-area:content;
     padding:20px;
@@ -117,15 +123,6 @@ font-family: Arial, Helvetica, sans-serif;
     grid-area:bottom;
     justify-self: center;
 }
-
-#Adam img{
-    box-shadow:2px 2px 3px rgb(59, 59, 59);
-    max-width: 100%;
-    height:auto;
-    
-    border-radius: 30px;
-}
-
 
 aside{
     background-color:#118AB2;
@@ -151,32 +148,6 @@ aside{
         "image bottom bottom";
     
 }
-#Owen .top{
-    grid-area:top;
-    display:flex;
-    justify-content: center;
-    align-content:center;
-    color:rgb(255, 255, 255);
-    background-color: rgb(128, 149, 177);
-}
-
-#Owen .image{
-    grid-area:image;
-    padding:20px;
-    }
-#Owen .content{
-    grid-area:content;
-    padding:20px;
-}
-#Owen .bottom{
-    grid-area:bottom;
-}
-
-#Owen img{
-    box-shadow:2px 2px 3px rgb(59, 59, 59);
-    max-width: 100%;
-    height:auto;
-}
 
 #Jarne{
     border:1px solid black;
@@ -200,34 +171,6 @@ aside{
         "image bottom bottom";
 }
 
-#Brandon .top{
-    grid-area:top;
-    display:flex;
-    justify-content: center;
-    align-content:center;
-    color:rgb(255, 255, 255);
-    background-color: rgb(128, 149, 177);
-}
-
-#Brandon .image{
-    grid-area:image;
-    padding:20px;
-    }
-#Brandon .content{
-        grid-area:content;
-        padding:20px;
-    }
-
-#Brandon .bottom{
-        grid-area:bottom;
-    }
-
-#Brandon img{
-        box-shadow:2px 2px 3px rgb(59, 59, 59);
-        max-width: 100%;
-        height:auto;
-    }
-
 #Max{
         background-color: rgb(255, 255, 255);
         width:60vw;
@@ -245,30 +188,3 @@ aside{
             "image bottom bottom";
     }
     
-#Max .top{
-        grid-area:top;
-        display:flex;
-        justify-content: center;
-        align-content:center;
-        color:rgb(255, 255, 255);
-        background-color: rgb(128, 149, 177);
-    }
-    
-#Max .image{
-        grid-area:image;
-        padding:20px;
-        }
-#Max .content{
-            grid-area:content;
-            padding:20px;
-        }
-    
-#Max .bottom{
-            grid-area:bottom;
-        }
-    
-#Max img{
-            box-shadow:2px 2px 3px rgb(59, 59, 59);
-            max-width: 100%;
-            height:auto;
-        }    
