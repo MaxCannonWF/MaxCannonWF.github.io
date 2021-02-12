@@ -47,7 +47,7 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 #Adam{
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0);
     width:60vw;
     min-height: 75vh;
     margin:auto;
@@ -60,34 +60,57 @@ font-family: Arial, Helvetica, sans-serif;
         "top top top"
         "image content content"
         "image content content"
-        "image bottom bottom";
+        "bottom bottom bottom";
     
 }
-#Adam .top{
+#AdamGlow{
+    width:100vw;
+    background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgba(255,255,255,0) 100%);
+    height: 100vh;
+}
+
+.top{
     grid-area:top;
     display:flex;
     justify-content: center;
     align-content:center;
     color:rgb(255, 255, 255);
     background-color: rgb(128, 149, 177);
-    
+    border-radius: 0 0 30px 30px;
 }
-#Adam .image{
+
+.top:after{
+    content: "";
+    position: relative;
+    top: 99%;
+    right:46vw;
+    width: 0;
+    height: 0;
+    border-top: 3vw solid rgb(128, 149, 177);
+    border-right: 3vw solid transparent;
+    border-left: 1vw solid transparent;
+      
+}
+.image{
     grid-area:image;
     padding:20px;
-    }
-#Adam .content{
+}
+.content{
     grid-area:content;
     padding:20px;
 }
-#Adam .bottom{
+
+.bottom{
     grid-area:bottom;
+    justify-self: center;
 }
 
 #Adam img{
     box-shadow:2px 2px 3px rgb(59, 59, 59);
     max-width: 100%;
     height:auto;
+    
+    border-radius: 30px;
 }
 
 
