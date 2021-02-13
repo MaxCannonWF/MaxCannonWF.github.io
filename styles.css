@@ -180,6 +180,23 @@ aside{
         "image bottom bottom";
 }
 
+p {
+    animation-duration: 3s;
+    animation-name: slideup;
+  }
+
+  @keyframes slideup {
+    from {
+      margin-bottom: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-bottom: 0%;
+      width: 100%;
+    }
+  }
+
 #Max{
         background-color: rgb(255, 255, 255);
         width:60vw;
