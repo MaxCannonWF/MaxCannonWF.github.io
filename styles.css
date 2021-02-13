@@ -203,3 +203,25 @@ aside{
         100% {transform: scale(1, 1);}
     }
 
+    #MaxPage {
+        position: fixed;
+        padding: 0;
+        margin: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background:rgb(255, 255, 255);
+        animation-name: MaxBGdiv;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    
+      }
+    
+    
+      @keyframes MaxBGdiv {
+        50% {
+          background: #555c61;
+        }
+    
+}
