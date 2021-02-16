@@ -161,8 +161,20 @@ aside{
 }
 
 #Jarne{
-    border:1px solid black;
-    background-color: palegreen;
+    background-color: rgb(255, 255, 255);
+    width:60vw;
+    min-height: 75vh;
+    margin:auto;
+    border-radius: 10px;
+    display:grid;
+    grid-template-columns: 25% 1fr 1fr;
+    grid-template-rows: 30% 1fr 1fr 1fr;
+    
+    grid-template-areas:
+        "top top top"
+        "image content content"
+        "image content content"
+        "image bottom bottom";
 }
 
 #Brandon{
@@ -182,6 +194,12 @@ aside{
         "image bottom bottom";
 }
 
+ @keyframes popin{
+        0% {transform: scale(0, 0);}
+        60% {transform: scale(1.3, 1.3);}
+        100% {transform: scale(1, 1);}
+    }
+
 #Max{
         background-color: rgb(255, 255, 255);
         width:60vw;
@@ -199,9 +217,44 @@ aside{
             "image bottom bottom";
  }
     
-    @keyframes popin{
-        0% {transform: scale(0, 0);}
-        60% {transform: scale(1.3, 1.3);}
-        100% {transform: scale(1, 1);}
-    }
+.MaxPulse{
+    background: rgba(0, 0, 0, 0);
+	border-radius: 50%;
+	margin: 10px;
+	height: auto;
+	width: auto;
 
+	box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+	transform: scale(1);
+	animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+	50% {
+		transform: scale(0.8);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+
+}
+#MaxPageAnim {
+        position: fixed;
+        padding: 0;
+        margin: 0;
+        top: 45px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(236, 13, 13, 0.473);
+        animation-name: MaxPagePulse;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    
+      }
+    
+    
+      @keyframes MaxPagePulse {
+        50% {
+          background: #ff070700;
+        }
+      }   
+   
