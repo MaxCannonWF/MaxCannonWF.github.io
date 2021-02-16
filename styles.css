@@ -159,8 +159,20 @@ aside{
 }
 
 #Jarne{
-    border:1px solid black;
-    background-color: palegreen;
+    background-color: rgb(255, 255, 255);
+    width:60vw;
+    min-height: 75vh;
+    margin:auto;
+    border-radius: 10px;
+    display:grid;
+    grid-template-columns: 25% 1fr 1fr;
+    grid-template-rows: 30% 1fr 1fr 1fr;
+    
+    grid-template-areas:
+        "top top top"
+        "image content content"
+        "image content content"
+        "image bottom bottom";
 }
 
 #Brandon{
