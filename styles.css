@@ -38,9 +38,7 @@ h1{
     font-size:250%;
     letter-spacing: 1px;
     font-weight:normal;
-    animation-name:popin;
-    animation-duration: 1s;
-    animation-timing-function:cubic-bezier(1, 0, 0, 1);
+    
 }
 p{
     font-family: 'Roboto', sans-serif;
@@ -76,8 +74,12 @@ font-family: Arial, Helvetica, sans-serif;
         "top top top"
         "image content content"
         "image content content"
-        "bottom bottom bottom";
-    
+        "bottom bottom bottom";  
+}
+#Adam h1{
+    animation-name:popin;
+    animation-duration: 1s;
+    animation-timing-function:cubic-bezier(1, 0, 0, 1);
 }
 #adamisold{
     background-color: rgb(163, 243, 132);
