@@ -205,7 +205,9 @@ aside{
   }
 #Brandon h2{
     animation-duration: 3s;
-    animation-name: slidein
+    animation-name: slidein;
+    text-decoration: wavy;
+    
 }
 
 #Brandon h1{
@@ -214,6 +216,18 @@ aside{
     background-color: rgb(128, 149, 177);
     animation-name: colorchange;
     animation-duration: 3s;
+}
+
+#Brandonwebb{
+    justify-content:start;
+    align-content: flex-end;
+    font-display:inherit;
+}
+
+.Brandonid{
+    display: block;
+    border-radius: 20px;
+    background-color: radial-gradient rgba(2, 56, 122);
 }
 
 @keyframes slidein {
