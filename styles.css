@@ -134,6 +134,54 @@ aside{
         "image bottom bottom";
     
 }
+
+#OwenBaby{
+    color:#ffc0cb;
+    font-size: 20px;
+    text-shadow: 2px 2px #cc8490;
+}
+
+.OwenSparkles{
+    color:#00ffff;
+    font-size: 20px;
+    text-shadow: 2px 2px #39a5a5;
+}
+
+.OwenDepression{
+    color: #4545f1;
+    font-style:italic;
+    text-shadow: 1px 1px #000046;
+}
+
+#OwenAnim {
+    animation-name: owenbganim;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes owenbganim{
+    0% {background-color: #E1FFE1;}
+    50% {background-color: #FFE2E2;}
+    100% {background-color: #E1FFE1;}
+}
+
+#Jarne{
+    background-color: rgb(255, 255, 255);
+    width:60vw;
+    min-height: 75vh;
+    margin:auto;
+    border-radius: 10px;
+    display:grid;
+    grid-template-columns: 25% 1fr 1fr;
+    grid-template-rows: 30% 1fr 1fr 1fr;
+    
+    grid-template-areas:
+        "top top top"
+        "image content content"
+        "image content content"
+        "image bottom bottom";
+    
+}
 #Owen .top{
     grid-area:top;
     display:flex;
