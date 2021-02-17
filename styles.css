@@ -1,7 +1,7 @@
 body{
     background-color:#e1ffe1;
-    padding:2px;
-    margin:2px;
+    margin: 0px;
+    padding:0px;
 }
 .navigation{
     z-index: 2;
@@ -11,7 +11,7 @@ body{
     margin: 0px;
     padding: 0px;
     overflow: hidden;
-    background-color: #118AB2;
+    background-color: #B4CCB4;
 }
 
 .navigation li{
@@ -22,11 +22,11 @@ body{
     list-style-type: none;
     margin: 0px;
     padding: 0px;
+    
 }
 
 .navigation li:hover{
-    background-color: #0A5770;
-    text-decoration:underline white;
+    background-color: #A36F89;
 }
 
 h1{
@@ -49,19 +49,15 @@ h2{
     font-weight:lighter;
 }
 
-h3{
-    font-family: 'Ballet', cursive;
-    font-size:450%;
-    text-align: center;
-}
-
 li a {
 display: block;
-color: rgb(121, 118, 118);
+color: rgb(0, 0, 0);
 text-align: center;
 padding: 14px 16px;
 text-decoration: underline;
-font-family: Arial, Helvetica, sans-serif;
+font-family: 'Roboto', sans-serif;
+font-weight:lighter;
+
 }
 
 #Adam{
@@ -216,23 +212,6 @@ aside{
     
 }
 
-#Jarne{
-    background-color: rgb(255, 255, 255);
-    width:60vw;
-    min-height: 75vh;
-    margin:auto;
-    border-radius: 10px;
-    display:grid;
-    grid-template-columns: 25% 1fr 1fr;
-    grid-template-rows: 30% 1fr 1fr 1fr;
-    
-    grid-template-areas:
-        "top top top"
-        "image content content"
-        "image content content"
-        "image bottom bottom";
-}
-
 #Brandon{
     background-color: rgb(244, 245, 233);
     width:60vw;
@@ -249,7 +228,6 @@ aside{
         "image content content"
         "image bottom bottom";
 }
-
 
 @keyframes colorchange {
     from {background-color: rgb(167, 40, 40);}
@@ -376,42 +354,51 @@ aside{
     background-color: white;
     border: solid;
 }
+.pepe{
+    align-self: center;
+}
 
 .indexNav{
     margin: 0;
     padding: 0;
-    z-index: 2;
-    float: left;
-    width: 100%;
-    text-align:center;
-    margin: 0px;
-    padding: 0px;
-    overflow: hidden;
-    background-color: #118AB2;
+    display:flex;
+    justify-content: center;
+    align-content:center;
+    background-color: #B4CCB4;
     grid-area: indexNav;
 }
 
 .indexNav li{
-    width: auto;
-    float: none;
+    width: 160px;
     text-align:center;
-    display: inline-block;
     list-style-type: none;
     margin: 10px;
     padding: 10px;
     font-family: 'Anton', sans-serif;
-    font-weight:lighter;
+    font-weight:bolder;
 }
 
 .indexNav li:hover{
-    background-color: #f1f1f1;
-    text-decoration:underline black;
+    background-color: #E1FFE1;
 }
 
 .indexNav a{
     color: black;
 }
-
+.indexNav a:hover{
+    animation-name: wiggle;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ;
+}
+@keyframes wiggle{
+    25%{
+        transform: rotate(10deg);
+    }
+    75%{
+        transform: rotate(-10deg);
+    } 
+}
 .indexNav img{
     display: block;
     margin-left: auto;
@@ -420,46 +407,74 @@ aside{
     padding-bottom: 10px;
 }
 
-.flex-container{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    margin: 0px;
-    padding: 0px;
-}
-
-.flexItem{
-    display: inline;
-}
-
-.flexLogo{
-    flex-grow: 4;
-    flex-basis: auto;
-    transform: scaleY(.7);
-}
-
-.artfulLink{
-    display: grid;
-    grid-template-columns: 40px  auto  40px;
-}
-
 #Index{
-    width:99vw;
+    background-color:#fff;
+    width:100%;
+    margin:0px;
+    padding:0px;
     min-height: 75vh;
-    margin:auto;
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 25% 13% 25% 25%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows:  2% 25% 2% 15% 25% auto;
     
-    grid-template-areas:
-        "top top top top top top"
-        "indexNav indexNav indexNav indexNav indexNav indexNav"
-        "fire fire fire fire fire fire"
-        "footer footer footer footer footer footer";
+     grid-template-areas:
+        "mar mar mar mar mar"
+        "logo logo logo logo logo"
+        "qee qee qee qee qee"
+        "indexNav indexNav indexNav indexNav indexNav"
+        "fire fire fire fire fire"
+        "SPfooter SPfooter SPfooter SPfooter SPfooter"; 
+}
+
+.logo{
+    grid-area:logo;
+    display:flex;
+    justify-content: center;
+    align-content:center;
+    background-color:#e1ffe1;
+}
+
+.mar{
+    grid-area:mar;
+    display:flex;
+    background-color:#e1ffe1;
+}
+.qee{
+    grid-area:qee;
+    display:flex;
+    background-color:#e1ffe1;
+}
+marquee{
+    font-family: 'Anton', sans-serif;
+    font-weight: bolder;
 }
 
 .fire{
     grid-area:fire;
-    grid-column-start: 2;
-    grid-column-end: span 2;
+    display:flex;
+    justify-content: center;
+    align-content:center;
+    background-color:#F0D3E1;
+}
+.fire img{
+    max-height:200px;
+    width: auto;
+}
+
+.SPfooter{
+    grid-area:SPfooter;
+    display:flex;
+    justify-content: center;
+    align-content:center;
+    background-color: white;
+}
+.SPfooter img{
+    padding:10px;
+}
+
+.artful{
+    font-family: 'Ballet', cursive;
+    font-size:450%;
+    font-weight: bolder;
+    align-self:center;
 }
