@@ -1,7 +1,7 @@
 body{
     background-color:#e1ffe1;
-    padding:2px;
-    margin:2px;
+    margin: 0px;
+    padding:0px;
 }
 .navigation{
     z-index: 2;
@@ -22,11 +22,11 @@ body{
     list-style-type: none;
     margin: 0px;
     padding: 0px;
+    
 }
 
 .navigation li:hover{
-    background-color: #0A5770;
-    text-decoration:underline white;
+    background-color: #A36F89;
 }
 
 h1{
@@ -51,11 +51,13 @@ h2{
 
 li a {
 display: block;
-color: rgb(121, 118, 118);
+color: rgb(0, 0, 0);
 text-align: center;
 padding: 14px 16px;
 text-decoration: underline;
-font-family: Arial, Helvetica, sans-serif;
+font-family: 'Roboto', sans-serif;
+font-weight:lighter;
+
 }
 
 #Adam{
@@ -452,7 +454,7 @@ marquee{
     display:flex;
     justify-content: center;
     align-content:center;
-    background-color:#fff;
+    background-color:#F0D3E1;
 }
 .fire img{
     max-height:200px;
