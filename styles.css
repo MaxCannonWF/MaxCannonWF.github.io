@@ -4,8 +4,6 @@ body{
     margin:0px;
 }
 .navigation{
-    margin: 0;
-    padding: 0;
     z-index: 2;
     float: left;
     width: 100%;
@@ -22,8 +20,8 @@ body{
     text-align:center;
     display: inline-block;
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 }
 
 .navigation li:hover{
@@ -51,6 +49,12 @@ h2{
     padding:0px;
     font-family: 'Anton', sans-serif;
     font-weight:lighter;
+}
+
+h3{
+    font-family: 'Ballet', cursive;
+    font-size:450%;
+    text-align: center;
 }
 
 li a {
@@ -250,9 +254,114 @@ aside{
       }
     
     
-      @keyframes MaxPagePulse {
-        50% {
-          background: #ff070700;
-        }
-      }   
-   
+@keyframes MaxPagePulse {
+    50% {
+        background: #ff070700;
+    }
+}
+
+.column{
+    float: none;
+    width: 33.33%;
+    padding: -10px;
+    text-align:center;
+    display: inline-block;
+}
+
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.pp{
+    background-color: white;
+    border: solid;
+}
+
+.indexNav{
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+    float: left;
+    width: 100%;
+    text-align:center;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background-color: #118AB2;
+    grid-area: indexNav;
+}
+
+.indexNav li{
+    width: auto;
+    float: none;
+    text-align:center;
+    display: inline-block;
+    list-style-type: none;
+    margin: 10px;
+    padding: 10px;
+    font-family: 'Anton', sans-serif;
+    font-weight:lighter;
+}
+
+.indexNav li:hover{
+    background-color: #f1f1f1;
+    text-decoration:underline black;
+}
+
+.indexNav a{
+    color: black;
+}
+
+.indexNav img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50px;
+    padding-bottom: 10px;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.flexItem{
+    display: inline;
+}
+
+.flexLogo{
+    flex-grow: 4;
+    flex-basis: auto;
+    transform: scaleY(.7);
+}
+
+.artfulLink{
+    display: grid;
+    grid-template-columns: 40px  auto  40px;
+}
+
+#Index{
+    width:99vw;
+    min-height: 75vh;
+    margin:auto;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 25% 13% 25% 25%;
+    
+    grid-template-areas:
+        "top top top top top top"
+        "indexNav indexNav indexNav indexNav indexNav indexNav"
+        "fire fire fire fire fire fire"
+        "footer footer footer footer footer footer";
+}
+
+.fire{
+    grid-area:fire;
+    grid-column-start: 2;
+    grid-column-end: span 2;
+}
