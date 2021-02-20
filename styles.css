@@ -195,7 +195,7 @@ aside{
 }
 
 #Jarne{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(206, 233, 233);
     width:60vw;
     min-height: 75vh;
     margin:auto;
@@ -209,7 +209,46 @@ aside{
         "image content content"
         "image content content"
         "image bottom bottom";
-    
+}
+
+#Jarne b{
+    display: flex;
+    font-weight: normal;
+    color: #d60000;
+}
+
+.jarneFR{
+    display: flex;
+    animation: cSpin 0.5s infinite;
+    font-weight: normal;
+}
+@keyframes cSpin{
+    50%{
+        transform: rotate(-2deg);
+    }
+    100%{transform: rotate(2deg);
+    }
+}
+
+#jarnePic{
+
+}
+
+#jarnePic:hover{
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+@keyframes spin{
+    15%{
+        transform: rotate(-15deg) scale(0.9);
+    }
+    85%{
+        transform: rotate(360deg) scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
 
 #Brandon{
