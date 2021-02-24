@@ -71,12 +71,20 @@
     <img src="images/tenor.gif" alt="spiderbaby" title="sipderbaby">
     <img src="images/tenor.gif" alt="spiderbaby" title="sipderbaby">
   </div>
+  
+  <script>
+    window.onload = function() {
+      document.getElementById("Index").style.fontSize = "15px";
+      document.getElementById("footertext").style.color = "white";
+      document.getElementById("footer").style.backgroundColor = "gray";
+    }
+  </script>
 
-  <footer class="bd-footer text-muted">
+  <footer id="footer" class="bd-footer text-muted">
     <div class="container-fluid p-3 p-md-5">
-      <p>WebBaby © 2021</p>
-        <p>Made with SquareSpace</p>
-        <p><a href="https://github.com/MaxCannonWF/WebBaby.github.io">GitHub</p></li>
+      <p id ="footertext">WebBaby © 2021 <br> Made with SquareSpace</p>
+      <hr>
+      <p><a href="https://github.com/MaxCannonWF/WebBaby.github.io">GitHub</a></p></li>
     </div>
   </footer>
 </body>
