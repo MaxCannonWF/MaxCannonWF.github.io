@@ -15,7 +15,7 @@ function changeElement(){
     var textChange = document.getElementById("changeMe");
     
     if(!changed){
-        textChange.innerHTML = "Oh god, not that one, oh shit... oh fuckin shit. Oh god... no I'm fine.";
+        textChange.innerHTML = "Oh boy, not that one, oh shoot... oh darn heck. Oh ... no I'm fine.";
         changed = true;
     } else{
         textChange.innerHTML = "Maybe you should touch them.";
