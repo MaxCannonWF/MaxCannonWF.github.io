@@ -1,15 +1,43 @@
 var changed = false;
 var first = true;
+//var randomNumber;
 
 window.onload = function(){
     var changeHTML = document.getElementById("changeHTML");
     var changeCSS = document.getElementById("changeCSS");
     var submitText = document.getElementById("submitText");
+    var lowSlider = document.getElementById("rangemaker-low");
+    var highSlider = document.getElementById("rangemaker-high");
+    var lowSliderText = document.getElementById("low-number");
+    var highSliderText = document.getElementById("high-number");
+    var rangeSubmitter = document.getElementById("submitRange");
 
     changeHTML.onclick = changeElement;
     changeCSS.onclick = changeStyle;
     submitText.onclick = textKeeper;
+   
+
+    lowSliderText.innerHTML = lowSlider.value;
+    highSliderText.innerHTML = highSlider.value;
+    
+    lowSlider.oninput = function(){
+        lowSliderText.innerHTML = this.value;  
+        lowSlider = this.value;     
+    }
+    highSlider.oninput = function(){
+        highSliderText.innerHTML = this.value;
+        highSlider = this.value;
+    }
+    rangeSubmitter.onclick = function() {
+        var randomNumber = Math.floor(Math.random() * (highSlider-lowSlider) + lowSlider) ;
+        document.getElementById("there").innerHTML = randomNumber + " (" + lowSlider + ") (" + highSlider + ")<br>";
+    }
+    
+    lowSlider = lowSlider.value;
+    highSlider = highSlider.value;
 }
+
+
 
 function changeElement(){
     var textChange = document.getElementById("changeMe");
