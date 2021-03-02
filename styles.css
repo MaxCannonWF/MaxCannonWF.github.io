@@ -428,7 +428,6 @@ aside{
     animation-name: wiggle;
     animation-duration: 1s;
     animation-iteration-count: infinite;
-    animation-timing-function: ;
 }
 @keyframes wiggle{
     25%{
@@ -516,4 +515,9 @@ marquee{
     font-size:450%;
     font-weight: bolder;
     align-self:center;
+}
+
+.rangeForm{
+    font-weight: 500;
+    font-size: larger;
 }

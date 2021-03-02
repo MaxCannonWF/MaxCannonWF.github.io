@@ -52,24 +52,48 @@
             </div>
           </nav>
 
-        <div class="container-fluid px-2" >
+        <div class="container-fluid px-2">
             <div class="d-flex justify-content-center">
                 <div class="jumbotron" >
                     <h1 class="display-4">These buttons probably do something.</h1>
                     <p class="lead" id="changeMe">Maybe you should touch them.</p>
                     <hr class="my-4">
-                    <div class="d-grid gap-2">
-                        <button type="button" class="btn btn-primary row" id="changeHTML">Change HTML</button>
-                        <button type="button" class="btn btn-primary row" id="changeCSS">Change CSS</button>
-                        <form id="frm" class="row">
-                            <input type="text" id="randomText" name="randomText" class="col-8">
-                            <button type="button" class="btn btn-primary col" id="submitText">Submit Text</button>
-                        </form>
+                    <div class="d-grid gap-3">
+                      <div class="row">
+                        <button type="button" class="btn btn-primary col mx-2" id="changeHTML">Change HTML</button>
+                        <button type="button" class="btn btn-primary col mx-2" id="changeCSS">Change CSS</button>
+                      </div>
+                      <div class="row">
+                        <input type="text" id="randomText" name="randomText" class="col-8 mx-2">
+                        <button type="button" class="btn btn-primary col mx-2" id="submitText">Submit Text</button>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <label for="rangemaker-low" class="form-label">Pick a low number: <span id="low-number" class="rangeForm"></span></label>
+                            <input type="range" class="form-range" id="rangemaker-low" min="0" max="50">
+                        </div>
+                        <div class="col">
+                            <label for="rangemaker-high" class="form-label">Pick a high number: <span id="high-number" class="rangeForm"></span> </label>
+                            <input type="range" class="form-range" id="rangemaker-high" min="51" max="100">
+                        </div>
+                      </div>
+                      <div class="row justify-content-center">
+                        <div class="col-3"> 
+                          <button type="button" class="btn btn-primary" id="submitRange">Submit Range</button>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col mx-2 alert alert-primary">
+                          <p id="here"> </p>
+                        </div>
+                        <div class="col mx-2 alert alert-secondary">
+                          <p id="there"> </p>
+                        </div>
+                      </div>
                     </div>
-                    <p id="here"> </p>
                 </div>
-            </div>
-        </div>
+              </div>
+          </div>
 
         <footer class="bd-footer text-muted">
             <div class="container-fluid p-3 p-md-5">
