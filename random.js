@@ -1,6 +1,6 @@
 var changed = false;
 var first = true;
-//var randomNumber;
+var randomNumber;
 
 window.onload = function(){
     var changeHTML = document.getElementById("changeHTML");
@@ -29,8 +29,9 @@ window.onload = function(){
         highSlider = this.value;
     }
     rangeSubmitter.onclick = function() {
-        var randomNumber = Math.floor(Math.random() * (highSlider-lowSlider) + lowSlider) ;
+        randomNumber = Math.floor(Math.random() * (highSlider-lowSlider) + lowSlider) ;       
         document.getElementById("there").innerHTML = randomNumber + " (" + lowSlider + ") (" + highSlider + ")<br>";
+        makeSquares(randomNumber);
     }
     
     lowSlider = lowSlider.value;
@@ -77,4 +78,18 @@ function textKeeper(){
         message.innerHTML = err;
     } 
     
+}
+
+function makeSquares(num){
+    var div = document.createElement("div");
+    
+    div.style.background = "black";
+    div.style.width = "5px";
+    div.style.height = "5px";
+    div.style.margin = "2px";
+    div.style.float = "left";
+
+    for(var i = 0; i < num ; i++){
+        document.getElementById("there").append(div);
+    }
 }
