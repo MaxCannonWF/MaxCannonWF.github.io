@@ -74,11 +74,11 @@ function updateDisp() {
 function gameOver() {
 
     if (enemyHealth <= 0) {
-        infoDisp.innerHTML = "You won, bless up!";
+        infoDisp.innerHTML = "You won!";
         return true;
     }
     if (playerHealth <=0) {
-        infoDisp.innerHTML = "You lost, bless down!";
+        infoDisp.innerHTML = "You lost!";
         return true;
     }
 
