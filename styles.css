@@ -521,3 +521,7 @@ marquee{
     font-weight: 500;
     font-size: larger;
 }
+
+#there{
+    max-width: 400px;
+}
