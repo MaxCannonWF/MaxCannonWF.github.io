@@ -1,6 +1,6 @@
 var changed = false;
 var first = true;
-var randomNumber;
+//var randomNumber;
 
 window.onload = function(){
     var changeHTML = document.getElementById("changeHTML");
@@ -31,7 +31,7 @@ window.onload = function(){
     rangeSubmitter.onclick = function() {
         randomNumber = Math.floor(Math.random() * (highSlider-lowSlider) + lowSlider) ;       
         document.getElementById("there").innerHTML = randomNumber + " (" + lowSlider + ") (" + highSlider + ")<br>";
-        makeSquares(randomNumber);
+        makeCircles(randomNumber);
     }
     
     lowSlider = lowSlider.value;
@@ -80,16 +80,17 @@ function textKeeper(){
     
 }
 
-function makeSquares(num){
+function makeCircles(num){
     var div = document.createElement("div");
     
-    div.style.background = "black";
-    div.style.width = "5px";
-    div.style.height = "5px";
+    div.style.backgroundColor = "red";
+    div.style.width = "15px";
+    div.style.height = "15px";
     div.style.margin = "2px";
     div.style.float = "left";
+    div.style.borderRadius ="50%";
 
-    for(var i = 0; i < num ; i++){
-        document.getElementById("there").append(div);
+    for(var i = 0; i <= num ; i++){
+        document.getElementById("there").append(div.cloneNode(true));
     }
 }
