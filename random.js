@@ -1,41 +1,37 @@
-var changed = false;
-var first = true;
-//var randomNumber;
+let changed = false;
+let first = true;
+let changeHTML = document.getElementById("changeHTML");
+let changeCSS = document.getElementById("changeCSS");
+let submitText = document.getElementById("submitText");
+let lowSlider = document.getElementById("rangemaker-low");
+let highSlider = document.getElementById("rangemaker-high");
+let lowSliderText = document.getElementById("low-number");
+let highSliderText = document.getElementById("high-number");
+let rangeSubmitter = document.getElementById("submitRange");
+let high = Number(highSlider.value);
+let low = Number(lowSlider.value);
 
-window.onload = function(){
-    var changeHTML = document.getElementById("changeHTML");
-    var changeCSS = document.getElementById("changeCSS");
-    var submitText = document.getElementById("submitText");
-    var lowSlider = document.getElementById("rangemaker-low");
-    var highSlider = document.getElementById("rangemaker-high");
-    var lowSliderText = document.getElementById("low-number");
-    var highSliderText = document.getElementById("high-number");
-    var rangeSubmitter = document.getElementById("submitRange");
+changeHTML.onclick = changeElement;
+changeCSS.onclick = changeStyle;
+submitText.onclick = textKeeper;
 
-    changeHTML.onclick = changeElement;
-    changeCSS.onclick = changeStyle;
-    submitText.onclick = textKeeper;
-   
+lowSliderText.innerHTML = lowSlider.value;
+highSliderText.innerHTML = highSlider.value;
 
-    lowSliderText.innerHTML = lowSlider.value;
-    highSliderText.innerHTML = highSlider.value;
-    
-    lowSlider.oninput = function(){
-        lowSliderText.innerHTML = this.value;  
-        lowSlider = this.value;     
-    }
-    highSlider.oninput = function(){
-        highSliderText.innerHTML = this.value;
-        highSlider = this.value;
-    }
-    rangeSubmitter.onclick = function() {
-        randomNumber = Math.floor(Math.random() * (highSlider-lowSlider) + lowSlider) ;       
-        document.getElementById("there").innerHTML = randomNumber + " (" + lowSlider + ") (" + highSlider + ")<br>";
-        makeCircles(randomNumber);
-    }
-    
-    lowSlider = lowSlider.value;
-    highSlider = highSlider.value;
+lowSlider.oninput = function(){
+    lowSliderText.innerHTML = this.value;  
+    low = Number(this.value);   
+}
+highSlider.oninput = function(){
+    highSliderText.innerHTML = this.value;
+    high = Number(this.value);
+}
+rangeSubmitter.onclick = function() {
+    let range = high-low;
+    let randomNumber = Math.floor(Math.random() * range); 
+    let finalNumber = randomNumber+low;     
+    document.getElementById("there").innerHTML = finalNumber + "<br>";
+    makeCircles(finalNumber);
 }
 
 
@@ -46,7 +42,7 @@ function changeElement(){
     if(!changed){
         textChange.innerHTML = "Oh boy, not that one, oh shoot... oh darn heck. Oh ... no I'm fine.";
         changed = true;
-    } else{
+    }else{
         textChange.innerHTML = "Maybe you should touch them.";
         changed = false;
     }
@@ -90,7 +86,7 @@ function makeCircles(num){
     div.style.float = "left";
     div.style.borderRadius ="50%";
 
-    for(var i = 0; i <= num ; i++){
+    for(var i = 0; i < num ; i++){
         document.getElementById("there").append(div.cloneNode(true));
     }
 }
