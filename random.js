@@ -8,8 +8,8 @@ let highSlider = document.getElementById("rangemaker-high");
 let lowSliderText = document.getElementById("low-number");
 let highSliderText = document.getElementById("high-number");
 let rangeSubmitter = document.getElementById("submitRange");
-let high = highSlider.value;
-let low = lowSlider.value;
+let high = Number(highSlider.value);
+let low = Number(lowSlider.value);
 
 changeHTML.onclick = changeElement;
 changeCSS.onclick = changeStyle;
@@ -20,23 +20,21 @@ highSliderText.innerHTML = highSlider.value;
 
 lowSlider.oninput = function(){
     lowSliderText.innerHTML = this.value;  
-    low = this.value;   
+    low = Number(this.value);   
 }
 highSlider.oninput = function(){
     highSliderText.innerHTML = this.value;
-    high = this.value;
+    high = Number(this.value);
 }
 rangeSubmitter.onclick = function() {
-           
-    document.getElementById("there").innerHTML = randomNumber(low, high);
-   // makeCircles(randomNumber(low, high));
+    let range = high-low;
+    let randomNumber = Math.floor(Math.random() * range); 
+    let finalNumber = randomNumber+low;     
+    document.getElementById("there").innerHTML = finalNumber + "<br>";
+    makeCircles(finalNumber);
 }
 
 
-
-function randomNumber(min, max){
-    return Math.floor(Math.random() * (max - min) + min);
-}
 
 function changeElement(){
     var textChange = document.getElementById("changeMe");
