@@ -4,7 +4,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="game.css">
@@ -13,7 +12,6 @@
   <body>
     <div class="jumbotron">
         <h1 id='info' class="display-4">The Web Baby Card Game</h1>
-        <hr class="my-4">
         <div class='row'>
             <div class='col'>
                 <p id='playerHealth' class="lead">Player Score: 50</p>
@@ -24,23 +22,29 @@
         </div>
     </div>
 
-    <div class="card-group card-container mx-auto">
+    <div class = 'custom-banner container-fluid'>
+
+      <p class = 'lead'>PlayerCards</p>
+    </div>
+
+    <div class="card-custom-container card-group">
         <div class="card">
           <img src="images/webbaby.gif" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">THE DANCE</h5>
-            <p class="card-text">The web baby dances for +10 damage!</p>
+            <h5 class="creature-name card-title">THE DANCE</h5>
+            <p class="creature-attack card-text">Attack: 10</p>
+            <p class="creature-defense card-text">Defense: 10</p>
           </div>
           <div class="card-footer">
             <small class="text-muted"></small>
           </div>
         </div>
-
         <div class="card">
           <img src="images/webbaby.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">THE BERN</h5>
-            <p class="card-text">Bundle up, because COVID hit ya! -10 health</p>
+            <p class="creature-attack card-text">Attack: 10</p>
+            <p class="creature-defense card-text">Defense: 10</p>
           </div>
           <div class="card-footer">
             <small class="text-muted"></small>
@@ -50,7 +54,8 @@
           <img src="images/webbaby.svg" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">THE BABY</h5>
-            <p class="card-text">A baby is born. Game Over.</p>
+            <p class="creature-attack card-text">Attack: 10</p>
+            <p class="creature-defense card-text">Defense: 10</p>
           </div>
           <div class="card-footer">
             <small class="text-muted"></small>
@@ -58,10 +63,52 @@
         </div>
       </div>
 
-    <div class='text-center button-custom'>
-        <button  id='play' type="button" class="btn-lg btn btn-primary">Play</button>
-        <button disabled id='playerTurn' type="button" class="btn-lg btn btn-success">Player</button>
-        <button disabled id='enemyTurn' type="button" class="btn-lg btn btn-danger">Enemy</button>
+    
+      <div class='custom-banner container-fluid'>
+
+        <p class ='lead'> Enemy Cards</p>
+      </div>
+
+      <div class="card-custom-container card-group">
+        <div class="card">
+          <img src="images/chrom.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="creature-name card-title">Name</h5>
+            <p class="creature-attack card-text">Attack: 10</p>
+            <p class="creature-defense card-text">Defense: 10</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"></small>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/hearteyes.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="creature-name card-title">Name</h5>
+            <p class="creature-attack card-text">Attack: 10</p>
+            <p class="creature-defense card-text">Defense: 10</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"></small>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/tenor.gif" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="creature-name card-title">Name</h5>
+            <p class="creature-attack card-text">Attack: 10</p>
+            <p class="creature-defense card-text">Defense: 10</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"></small>
+          </div>
+        </div>
+      </div>
+
+    <div class="button-cont">
+      <button id='playerTurn' type="button" class="btn btn-primary" disabled>Attack</button>
+      <button id='enemyTurn' type="button" class="btn btn-danger" disabled>Enemy Turn</button>
+      <button id='play' type="button" class="btn btn-success">Start Game</button>
     </div>
     <script src="game.js"></script>
   </body>
