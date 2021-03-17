@@ -71,15 +71,14 @@ font-weight:lighter;
 }
 
 .image{
-    grid-area:image;
-    padding:20px;
-    position: auto;
-    justify-content: left;
-    align-content: left;
+    display: flex;
+    justify-content: center;
+    align-content: start;
+    
 }
 .image img{
     box-shadow:2px 2px 3px rgb(59, 59, 59);
-    
+    max-height: 500px;
 }
 
 .content{
@@ -89,35 +88,6 @@ font-weight:lighter;
     padding:20px;
 }
 
-.bottom{
-    grid-area:bottom;
-    justify-self: center;
-}
-
-aside{
-    background-color:#118AB2;
-    color:white;
-    width:20%;
-    padding:10px;
-}
-
-#Owen {
-    background-color: rgb(255, 255, 255);
-    width:60vw;
-    min-height: 75vh;
-    margin:auto;
-    border-radius: 10px;
-    display:grid;
-    grid-template-columns: 25% 1fr 1fr;
-    grid-template-rows: 30% 1fr 1fr 1fr;
-    
-    grid-template-areas:
-        "top top top"
-        "image content content"
-        "image content content"
-        "image bottom bottom";
-    
-}
 
 #OwenBaby{
     color:#ffc0cb;
@@ -149,29 +119,6 @@ aside{
     100% {background-color: #E1FFE1;}
 }
 
-#Jarne{
-    background-color: rgb(206, 233, 233);
-    width:60vw;
-    min-height: 75vh;
-    margin:auto;
-    border-radius: 10px;
-    display:grid;
-    grid-template-columns: 25% 1fr 1fr;
-    grid-template-rows: 30% 1fr 1fr 1fr;
-    
-    grid-template-areas:
-        "top top top"
-        "image content content"
-        "image content content"
-        "image bottom bottom";
-}
-
-#Jarne b{
-    display: flex;
-    font-weight: normal;
-    color: #d60000;
-}
-
 .jarneFR{
     display: flex;
     animation: cSpin 0.5s infinite;
@@ -191,6 +138,7 @@ aside{
     animation-duration: 1s;
     animation-iteration-count: 1;
 }
+
 @keyframes spin{
     15%{
         transform: rotate(-15deg) scale(0.9);
@@ -203,53 +151,25 @@ aside{
     }
 }
 
-#Brandon{
-    background-color: rgb(244, 245, 233);
-    width:60vw;
-    min-height: 75vh;
-    margin:auto;
-    border-radius: 10px;
-    display:grid;
-    grid-template-columns: 25% 1fr 1fr;
-    grid-template-rows: 30% 1fr 1fr 1fr;
-    
-    grid-template-areas:
-        "top top top"
-        "image content content"
-        "image content content"
-        "image bottom bottom";
-}
+
 
 @keyframes colorchange {
     from {background-color: rgb(167, 40, 40);}
     to {background-color: rgb(128, 149, 177);}
   }
-#Brandon h2{
+#Brandon{
     animation-duration: 3s;
     animation-name: slidein;
-    text-decoration: wavy;
+    overflow: hidden;
     
 }
 
-#Brandon h1{
-    width: auto;
-    height: auto;
-    background-color: rgb(128, 149, 177);
+#Brandonh1{
+    
     animation-name: colorchange;
     animation-duration: 3s;
 }
 
-#Brandonwebb{
-    justify-content:start;
-    align-content: flex-end;
-    font-display:inherit;
-}
-
-.Brandonid{
-    display: block;
-    border-radius: 20px;
-    background-color: radial-gradient rgba(2, 56, 122);
-}
 
 @keyframes slidein {
     from {
@@ -269,23 +189,6 @@ aside{
         100% {transform: scale(1, 1);}
     }
 
-#Max{
-        background-color: rgb(255, 255, 255);
-        width:60vw;
-        min-height: 75vh;
-        margin:auto;
-        border-radius: 10px;
-        display:grid;
-        grid-template-columns: 25% 1fr 1fr;
-        grid-template-rows: 30% 1fr 1fr 1fr;
-        
-        grid-template-areas:
-            "top top top"
-            "image content content"
-            "image content content"
-            "image bottom bottom";
- }
-    
 .MaxPulse{
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
 	transform: scale(1);
@@ -321,60 +224,7 @@ aside{
     }
 }
 
-.column{
-    float: none;
-    width: 33.33%;
-    padding: -10px;
-    text-align:center;
-    display: inline-block;
-}
 
-.row::after{
-    content: "";
-    clear: both;
-    display: table;
-}
-
-.pp{
-    background-color: white;
-    border: solid;
-}
-.pepe{
-    align-self: center;
-}
-
-.indexNav{
-    margin: 0;
-    padding: 0;
-    display:flex;
-    justify-content: center;
-    align-content:center;
-    background-color: #B4CCB4;
-    grid-area: indexNav;
-}
-
-.indexNav li{
-    width: 160px;
-    text-align:center;
-    list-style-type: none;
-    margin: 10px;
-    padding: 10px;
-    font-family: 'Anton', sans-serif;
-    font-weight:bolder;
-}
-
-.indexNav li:hover{
-    background-color: #E1FFE1;
-}
-
-.indexNav a{
-    color: black;
-}
-.indexNav a:hover{
-    animation-name: wiggle;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-}
 @keyframes wiggle{
     25%{
         transform: rotate(10deg);
@@ -383,13 +233,13 @@ aside{
         transform: rotate(-10deg);
     } 
 }
+
 .SPfooter{
     background-color: #fdf9f9;
 }
 #footer{
     position: absolute;
     bottom:0;
-    max-height: 20%;
     width:100%;
     background-color: #fdf9f9;
 }
