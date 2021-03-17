@@ -94,20 +94,19 @@ font-weight:lighter;
 }
 
 .top{
-    grid-area:top;
     display:flex;
-    justify-content: right;
-    align-content:left;
+    justify-content: center;
+    align-content:center;
+    height: 300px;
     color:rgb(255, 255, 255);
     background-color: rgb(128, 149, 177);
-    text-decoration: underline;
 }
 
-#Adam .top::after{
+.top::after{
     content: "";
     position: relative;
-    top: 99%;
-    right:46vw;
+    top: 59%;
+    right:70vw;
     width: 0;
     height: 0;
     border-top: 3vw solid rgb(128, 149, 177);
@@ -125,12 +124,13 @@ font-weight:lighter;
 }
 .image img{
     box-shadow:2px 2px 3px rgb(59, 59, 59);
-    max-width: 100%;
-    height:auto;
+    
 }
 
 .content{
-    grid-area:content;
+    display:flex;
+    align-content: top;
+    justify-content: center;
     padding:20px;
 }
 
@@ -437,35 +437,23 @@ aside{
         transform: rotate(-10deg);
     } 
 }
-.indexNav img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50px;
-    padding-bottom: 10px;
+.SPfooter{
+    background-color: #fdf9f9;
 }
-
-#Index{
-    background-color:#fff;
+#footer{
+    position: absolute;
+    bottom:0;
     width:100%;
-    margin:0px;
-    padding:0px;
-    min-height: 75vh;
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows:  2% 25% 2% 15% 25% auto;
-    
-     grid-template-areas:
-        "mar mar mar mar mar"
-        "logo logo logo logo logo"
-        "qee qee qee qee qee"
-        "indexNav indexNav indexNav indexNav indexNav"
-        "fire fire fire fire fire"
-        "SPfooter SPfooter SPfooter SPfooter SPfooter"; 
+    background-color: #fdf9f9;
 }
-
+.Indexcontent{
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 4rem;
+}
 .logo{
-    grid-area:logo;
+    
     display:flex;
     justify-content: center;
     align-content:center;
@@ -487,35 +475,6 @@ marquee{
     font-weight: bolder;
 }
 
-.fire{
-    grid-area:fire;
-    display:flex;
-    justify-content: center;
-    align-content:center;
-    background-color:#F0D3E1;
-}
-.fire img{
-    max-height:200px;
-    width: auto;
-}
-
-.SPfooter{
-    grid-area:SPfooter;
-    display:flex;
-    justify-content: center;
-    align-content:center;
-    background-color: white;
-}
-.SPfooter img{
-    padding:10px;
-}
-
-.artful{
-    font-family: 'Ballet', cursive;
-    font-size:450%;
-    font-weight: bolder;
-    align-self:center;
-}
 
 .rangeForm{
     font-weight: 500;
