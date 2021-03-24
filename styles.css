@@ -61,7 +61,7 @@ font-weight:lighter;
     content: "";
     position: relative;
     top: 54%;
-    right:70vw;
+    right:65vw;
     width: 0;
     height: 0;
     border-top: 3vw solid rgb(128, 149, 177);
@@ -70,18 +70,9 @@ font-weight:lighter;
     z-index: 2;
 }
 
-.image{
-    display: flex;
-    justify-content: center;
-    align-content: start;
-    
-}
 .image img{
     box-shadow:2px 2px 3px rgb(59, 59, 59);
     max-height: 500px;
-    min-height:none;
-    max-width: 100%;
-    min-width: none;
 }
 
 .content{
