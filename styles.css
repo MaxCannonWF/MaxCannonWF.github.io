@@ -23,7 +23,7 @@ h2{
     font-family: 'Anton', sans-serif;
     font-weight:lighter;
 }
-/*look at this later*/
+
 li a {
 display: block;
 color: rgb(0, 0, 0);
@@ -51,7 +51,7 @@ font-weight:lighter;
 .top{
     display:flex;
     justify-content: center;
-    align-content:center;
+    align-items:center;
     height: 300px;
     color:rgb(255, 255, 255);
     background-color: rgb(128, 149, 177);
@@ -60,7 +60,7 @@ font-weight:lighter;
 .top::after{
     content: "";
     position: relative;
-    top: 59%;
+    top: 54%;
     right:70vw;
     width: 0;
     height: 0;
@@ -79,6 +79,9 @@ font-weight:lighter;
 .image img{
     box-shadow:2px 2px 3px rgb(59, 59, 59);
     max-height: 500px;
+    min-height:none;
+    max-width: 100%;
+    min-width: none;
 }
 
 .content{
@@ -236,12 +239,15 @@ font-weight:lighter;
 
 .SPfooter{
     background-color: #fdf9f9;
+    display: flex;
+    overflow: hidden;
 }
+
 #footer{
+    display: flex;
     position: absolute;
     bottom:0;
     width:100%;
-    height:5vw;
     background-color: #fdf9f9;
 }
 #footer p{
@@ -269,12 +275,10 @@ font-weight:lighter;
 }
 
 .mar{
-    grid-area:mar;
     display:flex;
     background-color:#e1ffe1;
 }
 .qee{
-    grid-area:qee;
     display:flex;
     background-color:#e1ffe1;
 }
@@ -283,6 +287,11 @@ marquee{
     font-weight: bolder;
 }
 
+.row{
+    display:flex;
+    margin:0px;
+    flex-wrap:wrap;
+}
 
 .rangeForm{
     font-weight: 500;
