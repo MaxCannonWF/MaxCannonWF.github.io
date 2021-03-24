@@ -88,9 +88,20 @@ function battle(i) {
 function cardDeath(cardArray, i) {
     cardArray[i][5] = 0;
 }
-function upgrade(){
 
-}
+function upgrade(){
+        var AreYouEligible
+        AreYouEligible = Math.random() * 1;
+        if (AreYouEligible > .2){
+            playerHealth += 10;
+            console.log(playerHealth, "Bless Up");
+        }
+        else{
+            playerHealth -= 15;
+            console.log(playerHealth, "Bless Down");
+        }
+        updateDisp();
+    }
 
 function play() {
     attackButton.disabled = false;
