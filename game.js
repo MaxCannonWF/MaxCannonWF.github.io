@@ -155,7 +155,7 @@ function initializeDisplay() {
 }
 
 function getRandomImageURL() {
-    ret = "/images/logos/";
+    ret = "images/logos/";
     ret += parseInt(Math.random());
     //ret += "/200";
     return ret;
