@@ -205,7 +205,7 @@ function getRandomColor() {
     return ret;
 }
 function getRandomName() {
-    var collectionOfNames = ['Coke', 'McDonalds','Third', 'Another One', 'Cool', 'Last']
+    var collectionOfNames = ['Number 8 Combo: Large', 'Baby Cheeseburger Meal','Kids Meal with Apple Slices', 'Grown Man Meal', 'Liver and Extra Onions', 'Movie Theater Popcorn with Extra Butter']
     var pushableNumber = parseInt(Math.random() *6);
     collectionOfNames.push(pushableNumber);
     return collectionOfNames[pushableNumber];
