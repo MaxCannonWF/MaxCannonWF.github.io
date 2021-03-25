@@ -156,7 +156,7 @@ function initializeDisplay() {
 
 function getRandomImageURL() {
     ret = "https://webbaby.org/images/logos/";
-    var pushableNumber = parseInt(Math.random() *6);
+    var pushableNumber = parseInt(Math.random() *7);
     ret += pushableNumber;
     ret += ".png";
     return ret;
