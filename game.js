@@ -155,10 +155,12 @@ function initializeDisplay() {
 }
 
 function getRandomImageURL() {
-    ret = "images/logos/";
-    ret += parseInt(Math.random());
-    //ret += "/200";
+    ret = "https://webbaby.org/images/logos/";
+    var pushableNumber = parseInt(Math.random() *6);
+    ret += pushableNumber;
+    ret += ".png";
     return ret;
+    console.log("RANDOMIMAGE:", ret);
 }
 
 function initializeCards(){
@@ -203,21 +205,10 @@ function getRandomColor() {
     return ret;
 }
 function getRandomName() {
-    var vowels = 'aeiou';
-    var consonants = 'qwrtypsdfghjklzxcvbnm';
-    var length = parseInt(Math.random() * 3 + 3);
-    var ret = '';
-
-    if (length % 2 == 0) {
-        ret += vowels.charAt(parseInt(Math.random() * vowels.length));
-    }
-    for (var i = 0; i < length; i++) {
-        ret += consonants.charAt(parseInt(Math.random() * consonants.length));
-        ret += vowels.charAt(parseInt(Math.random() * vowels.length));
-    }
-
-    vowels.charAt()
-    return ret;
+    var collectionOfNames = ['Coke', 'McDonalds','Third', 'Another One', 'Cool', 'Last']
+    var pushableNumber = parseInt(Math.random() *6);
+    collectionOfNames.push(pushableNumber);
+    return collectionOfNames[pushableNumber];
 }
 
 function playerTurn() {
