@@ -230,18 +230,18 @@ function enemyTurn() {
 }
 
 function updateDisp() {
-    playerHealthDisp.innerHTML = "Player Health: " + playerHealth;
-    enemyHealthDisp.innerHTML = "Enemy Health: " + enemyHealth;
+    playerHealthDisp.innerHTML = "Good Parent Points: " + playerHealth;
+    enemyHealthDisp.innerHTML = "Baby Happiness: " + enemyHealth;
 }
 
 function gameOver() {
 
     if (enemyHealth <= 0) {
-        infoDisp.innerHTML = "You won, bless up!";
+        infoDisp.innerHTML = "Your baby loves you";
         return true;
     }
     if (playerHealth <=0) {
-        infoDisp.innerHTML = "You lost, bless down!";
+        infoDisp.innerHTML = "Your baby hates you";
         return true;
     }
 
