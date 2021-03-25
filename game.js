@@ -155,9 +155,9 @@ function initializeDisplay() {
 }
 
 function getRandomImageURL() {
-    ret = "https://picsum.photos/id/";
-    ret += parseInt(Math.random() * 100 + 200);
-    ret += "/200";
+    ret = "/images/logos/";
+    ret += parseInt(Math.random());
+    //ret += "/200";
     return ret;
 }
 
