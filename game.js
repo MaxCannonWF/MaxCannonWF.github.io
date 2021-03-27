@@ -134,8 +134,8 @@ function initializeDisplay() {
 
     for (var i = 0; i < 6; i ++) {
         if( i < 3) {
-        attacksDisp[i].innerHTML = "Good Parent Points: " + playerCards[i][0];
-        defenseDisp[i].innerHTML = "Baby Happiness: " + playerCards[i][1];
+        attacksDisp[i].innerHTML = "Baby Happiness: " + playerCards[i][0];
+        defenseDisp[i].innerHTML = "Baby Hunger: " + playerCards[i][1];
         namesDisp[i].innerHTML = playerCards[i][2];
         cards[i].style.backgroundColor = playerCards[i][3];
         if (playerCards[i][5] == 0) {
@@ -144,8 +144,8 @@ function initializeDisplay() {
         imageDisp[i].src = playerCards[i][4];
         }
         else {
-        attacksDisp[i].innerHTML = "Good Parent Points: " + enemyCards[i-3][0];
-        defenseDisp[i].innerHTML = "Baby Happiness: " + enemyCards[i-3][1];
+        attacksDisp[i].innerHTML = "Baby Happiness: " + enemyCards[i-3][0];
+        defenseDisp[i].innerHTML = "Baby Hunger: " + enemyCards[i-3][1];
         namesDisp[i].innerHTML = enemyCards[i-3][2];
         cards[i].style.backgroundColor = enemyCards[i-3][3];
         if (enemyCards[i-3][5] == 0) {
@@ -233,8 +233,8 @@ function enemyTurn() {
 }
 
 function updateDisp() {
-    playerHealthDisp.innerHTML = "Good Parent Points: " + playerHealth;
-    enemyHealthDisp.innerHTML = "Baby Happiness: " + enemyHealth;
+    playerHealthDisp.innerHTML = "Baby Happiness: " + playerHealth;
+    enemyHealthDisp.innerHTML = "Baby Hunger: " + enemyHealth;
 }
 
 function gameOver() {
