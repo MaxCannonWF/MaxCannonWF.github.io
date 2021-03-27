@@ -49,12 +49,15 @@
   <body>
     <div class="jumbotron">
         <h1 id='info' class="display-4">What are you feeding your baby?</h1>
+        <div class='rules'>
+          <p id='theRules' class = "lead">Can you keep your baby healthy and happy? Press start to get a diet plan for your child. Each meal comes with two stats: Baby Hunger and Baby Happiness. Feed your baby to keep it alive and well. Get your baby's hunger level down to zero, but don't let the same happen to it's happiness! If you find your baby beginning to hate you and what you're feeding it, try the "Nurture" button to console your baby and earn back some Baby Happiness, but beware! Sometimes nurturing a baby is the wrong move and you will lose even more of that goodwill with your child!</p>
+        </div>
         <div class='row'>
             <div class='col'>
-                <p id='playerHealth' class="lead">Good Parent Points = 50</p>
+                <p id='playerHealth' class="lead">Baby Happiness = 50</p>
             </div>
             <div class='col'>
-                <p id='enemyHealth' class="lead">Baby Health = 50</p>
+                <p id='enemyHealth' class="lead">Baby Hunger = 50</p>
             </div>
         </div>
       </div>
@@ -63,7 +66,7 @@
 
       <div class='custom-banner container-fluid'>
 
-        <p class='lead'>Player Cards</p>
+        <p class='lead'>Meal Plan</p>
       </div> 
 
       <div class="card-custom-container card-group">
@@ -105,7 +108,7 @@
       
       <div class='custom-banner container-fluid'>
 
-        <p class='lead'>Enemy Cards</p>
+        
       </div> 
 
       <div class="card-custom-container card-group">
@@ -146,7 +149,7 @@
 
     <div class="button-cont">
       <button id='attack' type="button" class="btn btn-primary" disabled>Feed</button>
-      <button id='upgrade' type="button" class="btn btn-danger" disabled>New Meal</button>
+      <button id='upgrade' type="button" class="btn btn-danger" disabled>Nurture Baby</button>
       <button id='done' type="button" class="btn btn-success">Start</button>
     </div>
     <script src="game.js"></script>

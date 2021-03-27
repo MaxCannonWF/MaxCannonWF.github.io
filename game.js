@@ -93,15 +93,16 @@ function upgrade(){
         var AreYouEligible
         AreYouEligible = Math.random() * 1;
         if (AreYouEligible > .2){
-            initializeCards();
-            console.log(playerHealth, "Baby's Gotta New Diet!");
+            playerHealth += 10;
+            console.log(playerHealth, "Baby's Consoled");
         }
         else{
             playerHealth -= 15;
-            console.log(playerHealth, "Bless Down");
+            console.log(playerHealth, "Baby Tantrum");
         }
 
         updateDisp();
+        
     }
 
 function play() {
@@ -120,6 +121,7 @@ function play() {
 function playerTurnOver() {
 console.log('player turn over');
 }
+
 
 
 
