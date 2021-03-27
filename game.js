@@ -13,6 +13,15 @@ var cardBankLength = 100;
 
 var playerCards = [];
 var enemyCards = [];
+var foodBabyPics =[];
+foodBabyPics[0] = new Image();
+    foodBabyPics[0].src = 'images/foodBaby1.png';
+
+    foodBabyPics[1] = new Image();
+    foodBabyPics[1].src = 'images/foodBaby2.png';
+
+    foodBabyPics[2] = new Image();
+    foodBabyPics[2].src = 'images/foodBaby3.png';
 var cards;
 var namesDisp;
 var attacksDisp;
@@ -240,7 +249,7 @@ function updateDisp() {
 function gameOver() {
 
     if (enemyHealth <= 0) {
-        infoDisp.innerHTML = "Your baby loves you";
+       infoDisp.innerHTML = "Your baby loves you";
         return true;
     }
     if (playerHealth <=0) {
@@ -249,4 +258,22 @@ function gameOver() {
     }
 
     return false;
+}
+
+
+function bigBoy(){
+    if (playerHealth >= 40){
+        //foodBabyPics.push[0];
+        document.getElementById("bigboy").src = foodBabyPics[0].src;
+
+    }
+    else if(playerHealth <= 40){
+        //foodBabyPics.push[1];
+        document.getElementById("bigboy").src = foodBabyPics[1].src;
+
+    }
+    else if(playerHealth <= 24){
+        //foodBabyPics.push[2];
+        document.getElementById("bigboy").src = foodBabyPics[2].src;
+    }
 }
